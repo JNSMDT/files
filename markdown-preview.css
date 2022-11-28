@@ -15,7 +15,7 @@ html, body {
 	background:#fefefe;
 }
 body {
-	font: 1.3em 'Cascadia Code','Droid Sans Mono', 'monospace';
+	font: 1.2em 'Cascadia Code','Droid Sans Mono', 'monospace';
 	color: #333;
 	line-height: 1.4;
 }
@@ -57,11 +57,15 @@ h1 {
 h2 {
 	font-weight: normal;
 	morgin-bottom: 2.5em;
+	margin-top: .8em;
+	color: rgba(24, 24, 24, .9);
 }
 h3 {
+	font-size: 1.5em;
 	font-weight: normal;
 	font-style: italic;
 	margin-top: 1em;
+	color: rgba(80, 150, 35, 0.8);
 }
 
 h4{
@@ -91,18 +95,18 @@ code {
 	background: white;
 }
 a {
-	color: #2484c1;
-	text-decoration: none;
+	color: rgb(36, 132, 193);
+	text-decoration: underline;
 }
 a:hover {
-	text-decoration: underline;
+	color: rgba(36, 133, 193, 0.75);
 }
 a img {
 	border:none;
 }
 h1 a, h1 a:hover {
 	color: #333;
-	text-decoration: none;
+	text-decoration: underline;
 }
 hr {
 	color : #ddd;
