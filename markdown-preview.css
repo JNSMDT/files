@@ -3,7 +3,9 @@ img {
 	max-width: 100%;
 }
 table {
-	width: 100%;
+	width: 98%;
+	font-size: 0.8em;
+	margin: 1em auto;
 }
 table, th, td {
 	padding: 5px;
@@ -11,7 +13,7 @@ table, th, td {
 html, body {
 	padding:1em;
 	margin:auto;
-	max-width:42em;
+	max-width:60em;
 	background:#fefefe;
 }
 body {
@@ -70,6 +72,8 @@ h3 {
 
 h4{
 	font-weight: bold;
+	margin-top: 1em;
+    	margin-bottom: 0.5em;
 }
 p {
 	margin-top:0;
