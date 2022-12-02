@@ -1,157 +1,213 @@
-/* based on https://privaterookie.github.io/vsc-markdown-css/white/style.css */
-img {
-	max-width: 100%;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+*{
+	-webkit-font-smoothing:antialiased;
+	-webkit-overflow-scrolling:touch;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-text-size-adjust:none;
+	-webkit-touch-callout:none;
+	box-sizing:border-box
 }
-table {
-	width: 98%;
-	font-size: 0.8em;
-	margin: 1em auto;
+
+@font-face {
+	font-family: 'Roboto Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v7/L0x5DF4xlVMF-BfR8bXMIjhLq3o.ttf) format('truetype')
 }
-table, th, td {
-	padding: 5px;
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype')
 }
-html, body {
-	padding:1em;
-	margin:auto;
-	max-width:60em;
-	background:#fefefe;
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype')
 }
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype')
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+	-webkit-touch-callout: none;
+	box-sizing: border-box
+}
+
+
 body {
-	font: 1.2em 'Cascadia Code','Droid Sans Mono', 'monospace';
-	color: #333;
-	line-height: 1.4;
-}
-header, nav, article, footer {
-	width: 700px;
-	margin:0 auto;
-}
-article {
-	margin-top: 4em;
-	margin-bottom: 4em;
-	min-height: 400px;
-}
-footer {
-	margin-bottom:50px;
-}
-video {
-	margin: 2em 0;
-	border:1px solid #ddd;
-}
-nav {
-	font-size: .9em;
-	font-style: italic;
-	border-bottom: 1px solid #ddd;
-	padding: 1em 0;
-}
-nav p {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	color: var(--vscode-menu-background,#32383f);
+	font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+	font-size: 16px;
+	letter-spacing: 0;
 	margin: 0;
-}
-/* Typography -------------------------------------------------------- */
-h1,h2,h3,h4,h5,h6 {
-	text-align: justify;
+	overflow-x: hidden
 }
 
-h1 {
-	margin-top: 0;
-	font-weight: normal;
-	morgin-bottom: 2.5em;
-}
-h2 {
-	font-weight: normal;
-	morgin-bottom: 2.5em;
-	margin-top: .8em;
-	color: rgba(24, 24, 24, .9);
-}
-h3 {
-	font-size: 1.5em;
-	font-weight: normal;
-	font-style: italic;
-	margin-top: 1em;
-	color: rgba(80, 150, 35, 0.8);
+img {
+	max-width: 100%
 }
 
-h4{
-	font-weight: bold;
-	margin-top: 1em;
-    	margin-bottom: 0.5em;
+a[disabled] {
+	cursor: not-allowed;
+	opacity: .6
 }
-p {
-	margin-top:0;
-	-webkit-hypens:auto;
-	-moz-hypens:auto;
-	hyphens:auto;
+
+li input[type=checkbox] {
+	margin: 0 .2em .25em -1.6em;
+	vertical-align: middle
 }
-ul {
-	list-style: square;
-	padding-left:1.2em;
+
+.markdown-body>* {
+	box-sizing: border-box;
+	font-size: inherit
 }
-ol {
-	padding-left:1.2em;
+
+.markdown-body>:first-child {
+	margin-top: 0 !important
 }
-blockquote {
-	margin-left: 1em;
-	padding-left: 1em;
-	border-left: 1px solid #ddd;
+
+body {
+	background-color: #fff
 }
-code {
-	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
-	font-size: .9em;
-	background: white;
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body strong {
+	color: #112025;
+	font-weight: 600
 }
-a {
-	color: rgb(36, 132, 193);
-	text-decoration: underline;
+
+.markdown-body a {
+	color: var(--vscode-textLink-foreground, #0f9dc9);
+	font-weight: 600
 }
-a:hover {
-	color: rgba(36, 133, 193, 0.75);
+
+.md-sidebar-toc a {
+	color: #0f9dc9;
+	font-weight: 600
 }
-a img {
-	border:none;
+
+.markdown-body h1 {
+	font-size: 3.5rem;
+	margin: 0 0 1rem
 }
-h1 a, h1 a:hover {
-	color: #333;
-	text-decoration: underline;
+
+.markdown-body h2 {
+	font-size: 2.5rem;
+	margin: 2rem 0 .8rem
 }
-hr {
-	color : #ddd;
-	height : 1px;
+
+.markdown-body h3 {
+	font-size: 2.15rem;
+    margin: 2rem 0 0.6rem;
+    color: #3e4344;
+}
+
+.markdown-body h4 {
+	font-size: 1.75rem;
+}
+
+.markdown-body h5 {
+	font-size: 1.5rem
+
+}
+
+.markdown-body h6 {
+	font-size: 1rem;
+	color: #777
+}
+
+.markdown-body figure,
+.markdown-body p {
+	margin: 1.2em 0
+}
+
+.markdown-body hr {
+	border: none;
+	border-bottom: 1px solid #eee;
+	margin: 2em 0
+}
+
+.markdown-body table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: block;
+	margin-bottom: 1rem;
+	overflow: auto;
+	width: 100%
+}
+
+.markdown-body th {
+	font-weight: 700
+}
+
+.markdown-body td,
+.markdown-body th {
+	border: 1px solid #ddd;
+	padding: 6px 13px
+}
+
+.markdown-body tr {
+	border-top: 1px solid #ccc
+}
+
+
+.markdown-body ol,
+.markdown-body p,
+.markdown-body ul {
+	line-height: 1.6rem;
+	word-spacing: .05rem
+}
+
+.markdown-body ol,
+.markdown-body ul {
+	padding-left: 1.5rem
+}
+
+.markdown-body blockquote {
+	border-left: 4px solid #0f9dc9;
+	color: #858585;
+	background-color: #f0f0f0;
 	margin: 2em 0;
-	border-top : solid 1px #ddd;
-	border-bottom : none;
-	border-left: 0;
-	border-right: 0;
+	padding-left: 20px
 }
-p#heart{
-	font-size: 2em;
-	line-height: 1;
-	text-align: center;
-	color: #ccc;
+
+.markdown-body blockquote p {
+	font-weight: 600;
+	margin-left: 0
 }
-.red {
-	color:#B50000;
+
+.markdown-body iframe {
+	margin: 1em 0
 }
-/* Home Page --------------------------- */
-body#index li {
-	margin-bottom: 1em;
+
+.markdown-body em {
+	color: #7f8c8d
 }
-/* iPad -------------------------------------------------------- */
-@media only screen and (max-device-width: 1024px) {
-	body {
-			font-size: 120%;
-			line-height: 1.4;
- }
+.markdown-body code{
+	border-radius:2px;
+	color:#e96900;
+	font-size:.8rem;
+	margin:0 2px;
+	padding:3px 5px;
+	white-space:pre-wrap
 }
-/* @iPad */
-/* iPhone -------------------------------------------------------- */
-@media only screen and (max-device-width: 480px) {
-	body {
-			text-align: left;
- }
-	article, footer {
-			width: auto;
- }
-	article {
-			padding: 0 10px;
- }
+.markdown-body code,.markdown-body pre{
+	background-color:#f8f8f8;
+	font-family:Roboto Mono,Monaco,courier,monospace
 }
-/* @iPhone */
